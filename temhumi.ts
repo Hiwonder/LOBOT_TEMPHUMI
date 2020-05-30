@@ -3,13 +3,6 @@
 */
 //% weight=6 icon="\uf769" color=#2896ff
 namespace temhumi {
-    export enum TempSensor { 
-        //% block="Port 4"
-        port4 = 0x04,       
-        //% block="Port 9"
-        port9 = 0x09              
-    }
-
     export enum Temp_humi {
         //% block="Temperature"
         Temperature = 0x01,
@@ -39,8 +32,8 @@ namespace temhumi {
     /**
       * Temperature and humidity sensor init
       */
-    //% weight=62 blockId="initTempHumiSensor" block="Initialize temperature and humidity sensor at |%port|(P19:SCL,P20:SDA)"   
-   export function initTempHumiSensor(port: TempSensor) {
+    //% weight=62 blockId="initTempHumiSensor" block="Initialize temperature and humidity sensor at pin (P19:SCL,P20:SDA)"   
+   export function initTempHumiSensor() {
         for (let i = 0; i < 10; i++) {
             if (qdee_GetInitStatus()) {
                 return;
