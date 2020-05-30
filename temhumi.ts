@@ -39,7 +39,7 @@ namespace temhumi {
     /**
       * Temperature and humidity sensor init
       */
-    //% weight=62 blockId="initTempHumiSensor" block="Initialize temperature and humidity sensor at %port"   
+    //% weight=62 blockId="initTempHumiSensor" block="Initialize temperature and humidity sensor at |%port|(P19:SCL,P20:SDA)"   
    export function initTempHumiSensor(port: TempSensor) {
         for (let i = 0; i < 10; i++) {
             if (qdee_GetInitStatus()) {
